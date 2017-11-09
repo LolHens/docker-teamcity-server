@@ -19,6 +19,7 @@ RUN curl -Lo "/usr/local/bin/tini" $TINI_URL \
  && chmod +x "/usr/local/bin/tini"
 
 COPY ["bin/run-server.sh", "/run-server.sh"]
+RUN chmod +x "/run-server.sh"
 
 
 ENTRYPOINT ["tini", "-g", "--"]
