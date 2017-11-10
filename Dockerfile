@@ -22,6 +22,8 @@ COPY ["bin/run-server.sh", "/run-server.sh"]
 RUN chmod +x "/run-server.sh"
 
 
+ENV TOMCAT_STOP_TIMEOUT 9
+
 ENTRYPOINT ["tini", "-g", "--"]
 CMD ["/run-services.sh"]
 

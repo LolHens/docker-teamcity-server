@@ -12,7 +12,7 @@ if [[ "$TEAMCITY_CONTEXT" != "ROOT" ]]; then
     [[ "$current" != "$TEAMCITY_CONTEXT" ]] && mv "${TEAMCITY_DIST}/webapps/$current" "${TEAMCITY_DIST}/webapps/$TEAMCITY_CONTEXT"
 fi
 
-trap "'${TEAMCITY_DIST}/bin/teamcity-server.sh' stop 9; exit 0;" SIGTERM SIGINT SIGHUP
+trap "'${TEAMCITY_DIST}/bin/teamcity-server.sh' stop $TOMCAT_STOP_TIMEOUT; exit 0;" SIGTERM SIGINT SIGHUP
 
 "${TEAMCITY_DIST}/bin/teamcity-server.sh" start
 
