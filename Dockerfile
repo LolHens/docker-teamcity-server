@@ -10,7 +10,7 @@ ADD ["https://raw.githubusercontent.com/LolHens/docker-tools/master/bin/cleanima
 RUN chmod +x "/usr/local/bin/cleanimage"
 
 RUN apt-get update \
- && apt-get upgrade -y \
+ && apt-get dist-upgrade -y \
  && apt-get install -y \
       nano \
  && cleanimage
