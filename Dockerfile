@@ -1,4 +1,4 @@
-FROM jetbrains/teamcity-server:latest
+FROM jetbrains/teamcity-server:2020.1.2
 LABEL maintainer="LolHens <pierrekisters@gmail.com>"
 
 
